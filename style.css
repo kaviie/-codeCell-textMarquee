@@ -1,11 +1,37 @@
 /* COMMENTS */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Sigmar+One&display=swap');
+
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
 
-body {
+.marquee {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    background: purple;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #fff;
+    overflow: hidden;
+}
 
+.marquee div{
+    font-size: 3rem;
+    font-family: "Sigmar One", sans-serif;
+    animation: animate 100s linear infinite;
+    padding-left: 100%;
+    display: inline-block;
+}
+
+@keyframes animate{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
